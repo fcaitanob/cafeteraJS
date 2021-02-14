@@ -5,16 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetera</title>
 
+<!-- .............................................. -->
+<!-- Estilos inicio -->
+<!-- .............................................. -->
+
+<style>
+
+div#general {
+  margin-top: 18px;
+  background-color: maroon;
+  color: white;
+  padding: 10px; 
+  float: left; 
+  width: 30%; 
+  text-align: justify; 
+}
+
+div#inventarioActualizar {
+  background-color: maroon;
+  color: white;
+  padding: 10px; 
+  float: left; 
+  width: 30%; 
+  text-align: justify; 
+}
+
+div#InventarioMedio {
+	background-color: chocolate;
+	color: white;
+	padding: 10px; 
+	float: left; 
+	width: 30%; 
+	text-align: justify; 
+}
+input {
+	width:20px;
+}
+
+</style>
+
+<!-- .............................................. -->
+<!-- Estilos fin -->
+<!-- .............................................. -->
+
 </head>
 <body>
 
 <!-- .............................................. -->
 <!-- Columna 1 -->
 <!-- .............................................. -->
-
-<div style="padding: 10px; float: left; width: 30%; text-align: justify; ">
+<div id=general>
     <div>
             <h2>Estado Cafetera</h2>
+	</div>
+    <div>
             <p id=estado></p>
     </div>
 
@@ -50,7 +94,7 @@
 <!-- .............................................. -->
 <!-- Columna 2 -->
 <!-- .............................................. -->
-<div style="padding: 10px; float: left; width: 30%; text-align: justify; ">
+<div id=InventarioMedio>
 
     <div>
         <h2>Inventario actual</h2>
@@ -63,7 +107,7 @@
 <!-- .............................................. -->
 <!-- Columna 3 -->
 <!-- .............................................. -->
-<div style="padding: 10px; float: left; width: 30%; text-align: left; ">
+<div id=inventarioActualizar>
 
     <div>
         <h2>Actualizar inventario</h2>
@@ -76,26 +120,26 @@
     <br>
     <div>
         <label for="agua">Cantidad de agua:</label>
-        <input type="text" id="agua" name="agua" value=5 style="width:20px;">
+        <input type="text" id="agua" name="agua" value=5>
     </div>
     <div>
         <label for="leche">Cantidad de leche:</label>
-        <input type="text" id="leche" name="leche" value=5 style="width:20px;">
+        <input type="text" id="leche" name="leche" value=5>
     </div>
     <div>
         <label for="cafe">Cantidad de cafe:</label>
-        <input type="text" id="cafe" name="cafe" value=5 style="width:20px;">
+        <input type="text" id="cafe" name="cafe" value=5>
     </div>
     <div>
         <label for="tazas">Cantidad de tazas:</label>
-        <input type="text" id="tazas" name="tazas" value=5 style="width:20px;">
+        <input type="text" id="tazas" name="tazas" value=5>
     </div>
     <div>
         <label for="dinero">Cantidad de dinero:</label>
-        <input type="text" id="dinero" name="dinero" value=25 style="width:20px;">
+        <input type="text" id="dinero" name="dinero" value=25>
     </div>
+	<br><br><br><br><br><br>
 </div>
-<br>
 
 <!-- .............................................. -->
 
