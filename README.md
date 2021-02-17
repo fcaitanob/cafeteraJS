@@ -10,3 +10,5 @@ Con cafetera4.html y cafetera4mal.html se tiene el mismo comportamiento todo en 
 
 Se pueden ejecutar desde github con https://fcaitanob.github.io/cafeteraJS/cafetera4mal.html
 
+Tambien hay un https://fcaitanob.github.io/cafeteraJS/index.html
+
