@@ -180,7 +180,13 @@ class Cafetera2 {
 
 
     inicializarInsumos() {
-        this.agua = document.getElementById("agua").value;
+		// ERROR INICIO /////////////////////////////////////
+		// En la cantidad de agua pongo la cantidad de leche
+		////////////////////////////////////////////////////
+        this.agua = document.getElementById("leche").value;
+		// ERROR INICIO /////////////////////////////////////
+		// En la cantidad de agua pongo la cantidad de leche
+		////////////////////////////////////////////////////
         this.leche = document.getElementById("leche").value;
         this.capsulasCafe = document.getElementById("cafe").value;
         this.tazas = document.getElementById("tazas").value;
@@ -206,11 +212,17 @@ class Cafetera2 {
         let cafeRequerido = this.bebidas[nro][3];
         let tazasRequeridas = this.bebidas[nro][4];
         let dineroRequerido = this.bebidas[nro][5];
-        if (this.agua >= aguaRequerida &&
-            this.leche >= lecheRequerida &&
-            this.capsulasCafe >= cafeRequerido &&
-            this.tazas >= tazasRequeridas &&
-            this.dinero >= dineroRequerido) {
+		// ERROR INICIO /////////////////////////////////////
+		// cambio los >= por > dentro del if.
+		////////////////////////////////////////////////////
+        if (this.agua > aguaRequerida &&
+            this.leche > lecheRequerida &&
+            this.capsulasCafe > cafeRequerido &&
+            this.tazas > tazasRequeridas &&
+            this.dinero > dineroRequerido) {
+		// ERROR FIN ///////////////////////////////////////
+		// cambio los >= por > dentro del if.
+		////////////////////////////////////////////////////
                 this.agua -= this.bebidas[nro][1];
                 this.leche -= this.bebidas[nro][2];
                 this.capsulasCafe -= this.bebidas[nro][3];
@@ -222,9 +234,13 @@ class Cafetera2 {
                 this.muestroEstado(document.getElementById("estado").innerText +  
                 "\n" + "Faltan elementos para preparar lo solicitado!");
         }
-		// se introduce un error como ejercicio
+		// ERROR INICIO /////////////////////////////////////
+		// si el dinero es 5 o menor le como la plata
+		////////////////////////////////////////////////////
 		if (this.dinero<=5) { this.dinero = 0; };
-		// fin del error..
+		// ERROR INICIO /////////////////////////////////////
+		// si el dinero es 5 o menor le como la plata
+		////////////////////////////////////////////////////
 		
 		
         this.despliegoInventario();
@@ -232,14 +248,6 @@ class Cafetera2 {
 
 
 
-    inventarioAdd(agua, leche, capsulas, tazas, dinero) {
-        this.agua += agua;
-        this.leche += leche;
-        this.capsulasCafe += capsulas;
-        this.tazas += tazas;
-        this.dinero += dinero;
-        this.despliegoInventario();
-    }
 
     muestroEstado(texto) {
         document.getElementById("estado").innerText = texto;
